@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace ConsoleApp2
+namespace Day1
 {
     class Program
     {
