@@ -16,14 +16,19 @@ namespace Day5
             stopWatch.Start();
             bool nochangeFound = false;
 
-            List<char> textO = new List<char>(File.ReadAllText("input"));
+            //List<char> textO = new List<char>(File.ReadAllText("input"));
+            string textO = File.ReadAllText("input");
             string Units = new string(textO.Distinct().ToArray());
             Units = new string(Units.ToUpper().Distinct().ToArray());
             bool first = true;
             int smallestPoly = 0;
             foreach (var unit in Units)
             {
-                List<char> text = new List<char>(textO);
+                //List<char> text = new List<char>(textO);
+                var textWithoutChar = textO.Replace(unit.ToString(), string.Empty);
+                textWithoutChar = textWithoutChar.Replace(char.ToLower(unit).ToString(), string.Empty);
+                List<char> text = new List<char>(textWithoutChar);
+
                 for (int i = 0; i < text.Count; i++)
                 {
                     if (text[i] == char.ToLower(unit) || text[i] == unit)
