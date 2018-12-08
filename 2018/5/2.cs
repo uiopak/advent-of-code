@@ -10,13 +10,10 @@ namespace Day5
     {
         public static void Main()
         {
-            //var dir = Directory.GetCurrentDirectory();
-            //Console.WriteLine(dir);
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             bool nochangeFound = false;
 
-            //List<char> textO = new List<char>(File.ReadAllText("input"));
             string textO = File.ReadAllText("input");
             string Units = new string(textO.Distinct().ToArray());
             Units = new string(Units.ToUpper().Distinct().ToArray());
@@ -24,7 +21,6 @@ namespace Day5
             int smallestPoly = 0;
             foreach (var unit in Units)
             {
-                //List<char> text = new List<char>(textO);
                 var textWithoutChar = textO.Replace(unit.ToString(), string.Empty);
                 textWithoutChar = textWithoutChar.Replace(char.ToLower(unit).ToString(), string.Empty);
                 List<char> text = new List<char>(textWithoutChar);

@@ -27,17 +27,6 @@ namespace Day2
                     if (differ == 1)
                     {
                         Console.WriteLine(line.Remove(differIndex, 1));
-                        //var intersect = line.Intersect(line2);
-                        //var lineInter = line.Where(c => intersect.Contains(c));
-                        //var lineInter2 = line2.Where(c => intersect.Contains(c));
-                        //if (lineInter.Count() > lineInter2.Count())
-                        //{
-                        //    Console.WriteLine(String.Join("", lineInter2));
-                        //}
-                        //else
-                        //{
-                        //    Console.WriteLine(String.Join("", lineInter));
-                        //}
                         goto end;
 
                     }

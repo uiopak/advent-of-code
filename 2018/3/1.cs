@@ -21,10 +21,6 @@ namespace Day3
                               .Cast<Match>()
                               .Select(m => System.Int32.Parse(m.Value))
                               .ToArray();
-                //foreach (var res in result)
-                //{
-                //    list.Add(res);
-                //}
                 for (int i = result[1]; i < result[1] + result[3]; i++)
                 {
                     for (int j = result[2]; j < result[2] + result[4]; j++)
@@ -43,10 +39,6 @@ namespace Day3
                               .Cast<Match>()
                               .Select(m => System.Int32.Parse(m.Value))
                               .ToArray();
-                //foreach (var res in result)
-                //{
-                //    list.Add(res);
-                //}
                 for (int i = result[1]; i < result[1] + result[3]; i++)
                 {
                     for (int j = result[2]; j < result[2] + result[4]; j++)
@@ -61,23 +53,7 @@ namespace Day3
                     }
                 }
             }
-            //bool dontOverlap;
-            //foreach (var item in list)
-            //{
-            //    dontOverlap = true;
-            //    while (dontOverlap)
-            //    {
-            //        foreach (var item2 in list)
-            //        {
-            //            if (true)
-            //            {
-
-            //            }
-            //        }
-            //    }
-            //}
-            end:;
-            //System.Console.WriteLine(mult);
+        end:;
             System.Console.ReadLine();
         }
     }

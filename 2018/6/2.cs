@@ -26,8 +26,6 @@ namespace Day6
 
         public static void Main()
         {
-            //var dir = Directory.GetCurrentDirectory();
-            //Console.WriteLine(dir);
             int pointTotal = 0;
             int boardSizeX = 0;
             int boardSizeY = 0;

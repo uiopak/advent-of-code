@@ -28,9 +28,9 @@ namespace adventDay4
             var lines = File.ReadLines("input");
             var arr = lines.OrderBy(x => x).ToArray();
             System.Console.WriteLine(arr);
-            //dać dictionary
+
             List<guard> guards = new List<guard>();
-            //foreach (var line in lines)
+
             int lastG = 0;
             int line = 0;
             int sleepStart = 0;
@@ -75,14 +75,10 @@ namespace adventDay4
                     var g = guards.First(x => x.id == lastG);
                     for (int i = sleepStart; i < int.Parse(split[4]); i++)
                     {
-                        //guards.First(x => x.id == lastG).minutes[i]++;
                         g.minutes[i]++;
                     }
                     int tmp = guards.First(x => x.id == lastG).sleep[0] + (int.Parse(split[4]) - sleepStart);
-                    //for (int i = 0; i < tmp; i++)
-                    //{
-                    //    g.sleep++;
-                    //}
+
                     g.sleep[0] = tmp;
                     if (guards.First(x => x.id == lastG).sleep[0] > maxSleep)
                     {
@@ -90,7 +86,6 @@ namespace adventDay4
                         gmaxsleep = g.id;
                     }
                 }
-                //Console.WriteLine(a);
             }
             int bestg = 0;
             int bestm = 0;

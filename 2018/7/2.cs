@@ -16,15 +16,11 @@ namespace Day7
 
         public static void Main()
         {
-            //var dir = Directory.GetCurrentDirectory();
-            //Console.WriteLine(dir);
-
-
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
 
             var input = File.ReadAllLines("input");
-            //var input = File.ReadAllLines("test.txt");
+
             Dictionary<char, Instruction> instructions = new Dictionary<char, Instruction>();
             HashSet<char> allInstr = new HashSet<char>();
 
@@ -49,6 +45,7 @@ namespace Day7
                     allInstr.Add(test[7].ToCharArray().First());
                 }
             }
+
             var instrList = allInstr.OrderBy(x => x).ToList();
             HashSet<char> done = new HashSet<char>();
             Dictionary<char, int> doing = new Dictionary<char, int>();
