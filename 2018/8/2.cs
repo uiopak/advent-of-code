@@ -43,10 +43,6 @@ namespace Day8
 
         public static void Main()
         {
-            //var dir = Directory.GetCurrentDirectory();
-            //Console.WriteLine(dir);
-
-
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
 

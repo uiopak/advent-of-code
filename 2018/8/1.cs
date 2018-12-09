@@ -27,13 +27,9 @@ namespace Day8
 
         public static void Main()
         {
-            //var dir = Directory.GetCurrentDirectory();
-            //Console.WriteLine(dir);
-
-
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-
+            Console.WriteLine("test");
             var input = File.ReadAllText("input");
             int index = 0;
             int[] numbers = Array.ConvertAll(input.Split(' ').ToArray(), int.Parse);
